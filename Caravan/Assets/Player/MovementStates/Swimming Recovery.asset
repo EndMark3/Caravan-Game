@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7546ef9159114e489eb9c516d8c00e8, type: 3}
+  m_Name: Swimming Recovery
+  m_EditorClassIdentifier: 
+  grounded: 1
+  airborne: 1
+  gravity: 0
+  maxSpeed: 1
+  accel: 0
+  idleDecel: 20
+  turnDecel: 20
+  turnSpeed: 0
+  extraDecel: 20
+  flatMovement: 0
+  removeYComponent: 0
+  idleSlide: 0
+  heightMultiplier: 0
+  groundedTransition: {fileID: 11400000}
+  airborneTransition: {fileID: 11400000}
+  minSpeed: 2
+  minSlope: 360
+  minSpeedTransition: {fileID: 11400000, guid: 7b5e8835a293a1f4880c867c05e53cb1, type: 2}
+  resources: []
+  jumps:
+  - {fileID: 11400000, guid: b05c2fd2f1ccada449114f5c6ab0655a, type: 2}

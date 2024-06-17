@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7546ef9159114e489eb9c516d8c00e8, type: 3}
+  m_Name: Airborne Rolling
+  m_EditorClassIdentifier: 
+  grounded: 0
+  airborne: 1
+  gravity: 50
+  maxSpeed: 15
+  accel: 25
+  idleDecel: 25
+  turnDecel: 25
+  turnSpeed: 35
+  extraDecel: 0
+  flatMovement: 1
+  removeYComponent: 0
+  idleSlide: 1
+  heightMultiplier: 0
+  groundedTransition: {fileID: 11400000, guid: 6bdd2c271ef0b1b468c02c8eaa3b9548, type: 2}
+  airborneTransition: {fileID: 11400000}
+  minSpeed: 0
+  minSlope: 0
+  minSpeedTransition: {fileID: 0}
+  resources: []
+  jumps:
+  - {fileID: 11400000, guid: 181ef7b2bc8fb0046b788627a04e38fe, type: 2}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7546ef9159114e489eb9c516d8c00e8, type: 3}
+  m_Name: Swimming
+  m_EditorClassIdentifier: 
+  grounded: 1
+  airborne: 1
+  gravity: 0
+  maxSpeed: 8
+  accel: 10
+  idleDecel: 15
+  turnDecel: 25
+  turnSpeed: 7.5
+  extraDecel: 5
+  flatMovement: 0
+  removeYComponent: 0
+  idleSlide: 0
+  heightMultiplier: 0
+  groundedTransition: {fileID: 11400000}
+  airborneTransition: {fileID: 11400000}
+  minSpeed: 0
+  minSlope: 0
+  minSpeedTransition: {fileID: 0}
+  resources: []
+  jumps:
+  - {fileID: 11400000, guid: b05c2fd2f1ccada449114f5c6ab0655a, type: 2}
+  - {fileID: 11400000, guid: f2743f6c9461ca445846c49967554ba2, type: 2}
