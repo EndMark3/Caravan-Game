@@ -1,9 +1,4 @@
 
-Caravan/Library/ArtifactDB
-Caravan/Library/Artifacts
-Caravan/Library/Bee
-Caravan/Library/CurrentLayout-default.dwlt
-Caravan/Library/EditorInstance.json
-Caravan/Library/SceneVisibilityState.asset
-Caravan/Logs
-Caravan/Temp
+Caravan/Temp/UnityLockfile
+/Caravan/Temp
+/Caravan/Logs

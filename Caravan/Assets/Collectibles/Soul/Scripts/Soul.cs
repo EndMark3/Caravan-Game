@@ -18,9 +18,11 @@ public class Soul : MonoBehaviour, GrappleInteraction
         
     }
 
-    public void OnGrappleHit()
+    public bool OnGrappleHit()
     {
         Debug.Log("Soul clicked! Value: " + Concentration);
         Destroy(this.gameObject);
+
+        return false;
     }
 }

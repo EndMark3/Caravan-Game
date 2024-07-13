@@ -57,16 +57,16 @@ public class Grapple : MonoBehaviour
 			{
 				RaycastHit hit = grapplePoint();
 				if (hit.collider)
-				{
-					grappling = true;
-					anchorPoint = hit.point;
-					grappleLength = (anchorPoint - transform.position).magnitude;
+                {
+                    grappling = true;
 
-					GrappleInteraction interaction = hit.collider.GetComponent<GrappleInteraction>();
+                    GrappleInteraction interaction = hit.collider.GetComponent<GrappleInteraction>();
                     if (interaction != null)
                     {
-						interaction.OnGrappleHit();
+                        grappling = interaction.OnGrappleHit();
                     }
+					anchorPoint = hit.point;
+					grappleLength = (anchorPoint - transform.position).magnitude;
                 }
 			}
 		}

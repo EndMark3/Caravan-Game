@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface GrappleInteraction
 {
-    void OnGrappleHit();
+    bool OnGrappleHit(); // returns if Grapple or not
 }
