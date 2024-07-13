@@ -306,6 +306,8 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Collectibles/Soul/Scripts/Soul.cs"
+"Assets/GrappleInteraction.cs"
 "Assets/Player/Scripts/AltPlayerMovement.cs"
 "Assets/Player/Scripts/Formulas.cs"
 "Assets/Player/Scripts/Grapple.cs"
