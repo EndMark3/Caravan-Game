@@ -8,6 +8,8 @@ public class Grapple : MonoBehaviour
 	public Transform cam;
 	public AltPlayerMovement move;
 	public GameObject test;
+
+	public Color debugLineColor = Color.white;
 	
 	[Header("Shoot")]
 	public LayerMask ground;
@@ -47,7 +49,7 @@ public class Grapple : MonoBehaviour
 				//move.velocity += Vector3.up * jumpForce;
 			}
 			
-			Debug.DrawLine(transform.position, anchorPoint);
+			Debug.DrawLine(transform.position, anchorPoint, debugLineColor);
 		}	
 		else
 		{
@@ -59,7 +61,13 @@ public class Grapple : MonoBehaviour
 					grappling = true;
 					anchorPoint = hit.point;
 					grappleLength = (anchorPoint - transform.position).magnitude;
-				}
+
+					GrappleInteraction interaction = hit.collider.GetComponent<GrappleInteraction>();
+                    if (interaction != null)
+                    {
+						interaction.OnGrappleHit();
+                    }
+                }
 			}
 		}
     }
