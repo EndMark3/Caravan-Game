@@ -11,13 +11,13 @@ GameObject:
   - component: {fileID: 4676528648811006568}
   - component: {fileID: 6485479778304491206}
   - component: {fileID: 6716286913518704793}
-  - component: {fileID: 8416519780804924332}
+  - component: {fileID: 6941526104352328547}
   m_Layer: 9
   m_Name: Ball1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4
   m_IsActive: 1
 --- !u!4 &4676528648811006568
 Transform:
@@ -83,22 +83,48 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!111 &8416519780804924332
-Animation:
+--- !u!114 &6941526104352328547
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1572372842879450404}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: d01ff224f5bf544458f4986a9bdc154b, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: d01ff224f5bf544458f4986a9bdc154b, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2130ac65a3f6896449008206374880cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 0.98442566, b: 0.3820755, a: 1}
+    key1: {r: 0.9150943, g: 0.44186994, b: 0, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  gradientSpeed: 0.75
 --- !u!1 &7845115729898450589
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,7 +152,7 @@ Transform:
   m_GameObject: {fileID: 7845115729898450589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.6, y: 1.22, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 4676528648811006568}
   m_Father: {fileID: 0}
@@ -144,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c74d594b78dec6b4ca73e9bb8043c314, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Concentration: 0
 --- !u!136 &7556722915991743851
 CapsuleCollider:
   m_ObjectHideFlags: 0

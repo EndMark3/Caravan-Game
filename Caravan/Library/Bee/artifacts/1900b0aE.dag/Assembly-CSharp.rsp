@@ -307,7 +307,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Collectibles/Soul/Scripts/Soul.cs"
-"Assets/GrappleInteraction.cs"
 "Assets/Player/Scripts/AltPlayerMovement.cs"
 "Assets/Player/Scripts/Formulas.cs"
 "Assets/Player/Scripts/Grapple.cs"
@@ -316,6 +315,8 @@
 "Assets/Player/Scripts/MovementState.cs"
 "Assets/Player/Scripts/Platform.cs"
 "Assets/Player/Scripts/TPSCamera.cs"
+"Assets/Scripts/GrappleInteraction.cs"
+"Assets/Scripts/SineColor.cs"
 -langversion:8.0
 
 /deterministic
