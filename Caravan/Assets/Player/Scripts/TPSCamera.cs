@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 public class TPSCamera : MonoBehaviour
@@ -50,12 +51,15 @@ public class TPSCamera : MonoBehaviour
     float zoomVelocity;
     float aimStep;
     bool localplayer;
+    Menu menu;
 
     void Start()
     {
         camera = Camera.main.transform;
         move = GetComponent<AltPlayerMovement>();
         SetNewUp(up);
+        Cursor.lockState = CursorLockMode.Locked;
+        menu = GameObject.FindObjectOfType<Menu>();
     }
 
     private void Update()
@@ -64,7 +68,6 @@ public class TPSCamera : MonoBehaviour
         Debug.DrawLine(camera.position, camera.position + upMatrix[1], Color.red);
         Debug.DrawLine(camera.position, camera.position + upMatrix[2], Color.blue);
 
-        Cursor.lockState = CursorLockMode.Locked;
         RotateUp();
         Rotate();
         Zoom();
@@ -136,12 +139,15 @@ public class TPSCamera : MonoBehaviour
         if (cameraRotation.x > 180)
         { cameraRotation.x = -360 + cameraRotation.x; }
 
-        if (slowDownBounds != 0 && Input.GetAxis("Mouse Y") > 0 && cameraRotation.x < minMaxViewPitch.x + slowDownBounds)
-        { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y * (cameraRotation.x - minMaxViewPitch.x) / slowDownBounds, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
-        else if (slowDownBounds != 0 && Input.GetAxis("Mouse Y") < 0 && cameraRotation.x > minMaxViewPitch.y - slowDownBounds)
-        { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y * (minMaxViewPitch.y - cameraRotation.x) / slowDownBounds, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
-        else
-        { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
+        if (!menu.PauseMenu.activeSelf)
+        {
+            if (slowDownBounds != 0 && Input.GetAxis("Mouse Y") > 0 && cameraRotation.x < minMaxViewPitch.x + slowDownBounds)
+            { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y * (cameraRotation.x - minMaxViewPitch.x) / slowDownBounds, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
+            else if (slowDownBounds != 0 && Input.GetAxis("Mouse Y") < 0 && cameraRotation.x > minMaxViewPitch.y - slowDownBounds)
+            { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y * (minMaxViewPitch.y - cameraRotation.x) / slowDownBounds, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
+            else
+            { cameraRotation += new Vector3(-Input.GetAxis("Mouse Y") * mouseSens.y, Input.GetAxis("Mouse X") * mouseSens.x, 0); }
+        }
 
         if (cameraRotation.x > minMaxViewPitch.y)
         { cameraRotation.x = minMaxViewPitch.y; }

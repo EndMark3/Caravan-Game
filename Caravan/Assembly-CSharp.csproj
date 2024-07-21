@@ -55,15 +55,19 @@
   <ItemGroup>
     <Compile Include="Assets\Player\Scripts\Grapple.cs" />
     <Compile Include="Assets\Collectibles\Soul\Scripts\Soul.cs" />
-    <Compile Include="Assets\Scripts\GrappleInteraction.cs" />
+    <Compile Include="Assets\Scripts\Interfaces\GrappleInteraction.cs" />
     <Compile Include="Assets\Player\Scripts\Platform.cs" />
     <Compile Include="Assets\Player\Scripts\MovementState.cs" />
     <Compile Include="Assets\Player\Scripts\TPSCamera.cs" />
+    <Compile Include="Assets\Scripts\SineColor.cs" />
     <Compile Include="Assets\Player\Scripts\InputManager.cs" />
     <Compile Include="Assets\Player\Scripts\Formulas.cs" />
     <Compile Include="Assets\Player\Scripts\AltPlayerMovement.cs" />
     <Compile Include="Assets\Player\Scripts\Jump.cs" />
-    <Compile Include="Assets\Scripts\SineColor.cs" />
+    <Compile Include="Assets\Scripts\Wagon.cs" />
+    <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\Scripts\Caravan.cs" />
+    <Compile Include="Assets\Menu.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditorInternal;
 using UnityEngine;
 
 public class Grapple : MonoBehaviour
@@ -8,8 +9,9 @@ public class Grapple : MonoBehaviour
 	public Transform cam;
 	public AltPlayerMovement move;
 	public GameObject test;
+    public Transform anchorPoint;
 
-	public Color debugLineColor = Color.white;
+    public Color debugLineColor = Color.white;
 	
 	[Header("Shoot")]
 	public LayerMask ground;
@@ -27,29 +29,30 @@ public class Grapple : MonoBehaviour
 	public Vector2 jumpFraction;
 	
 	bool grappling;
-	Vector3 anchorPoint;
 	float grappleLength;
+
+	Menu menu;
 	
-    // Start is called before the first frame update
     void Start()
     {
-        
+        menu = GameObject.FindObjectOfType<Menu>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
-    {       
+    {
+		if (menu.PauseMenu.activeSelf) return;
+
 		if (grappling)
 		{
 			ApplyForces();
 			if (InputManager.GetButtonDown("Jump"))
 			{
 				Jump();
-				grappling = false;
+				CancelGrapple();
 				//move.velocity += Vector3.up * jumpForce;
 			}
 			
-			Debug.DrawLine(transform.position, anchorPoint, debugLineColor);
+			Debug.DrawLine(transform.position, anchorPoint.position, debugLineColor);
 		}	
 		else
 		{
@@ -65,8 +68,13 @@ public class Grapple : MonoBehaviour
                     {
                         grappling = interaction.OnGrappleHit();
                     }
-					anchorPoint = hit.point;
-					grappleLength = (anchorPoint - transform.position).magnitude;
+
+					if(grappling)
+                    {
+                        anchorPoint.position = hit.point;
+                        anchorPoint.SetParent(hit.transform);
+                        grappleLength = (anchorPoint.position - transform.position).magnitude;
+                    }
                 }
 			}
 		}
@@ -91,7 +99,7 @@ public class Grapple : MonoBehaviour
 	void ApplyForces()
 	{
 		Vector3 vel = move.velocity;
-		Vector3 line = (anchorPoint - transform.position);
+		Vector3 line = (anchorPoint.position - transform.position);
 		float length = line.magnitude;
 		line = line.normalized;
 		float speed = Vector3.Dot(vel, line);
@@ -112,7 +120,7 @@ public class Grapple : MonoBehaviour
 		}
 		else
 		{
-			grappling = false;
+			CancelGrapple();
 		}
 		
 		vel += line * speed;
@@ -121,7 +129,7 @@ public class Grapple : MonoBehaviour
 	
 	void Jump()
 	{
-		Vector3 line = (anchorPoint - transform.position);
+		Vector3 line = (anchorPoint.position - transform.position);
 		line = line.normalized;
 		
 		Vector3 vel = move.velocity;
@@ -133,4 +141,10 @@ public class Grapple : MonoBehaviour
 		if (height < jumpMax.y)
 		{ move.velocity += Vector3.up * (jumpMax.y - height) * jumpFraction.y; }
 	}
+
+	void CancelGrapple()
+    {
+        grappling = false;
+		anchorPoint.SetParent(null);
+    }
 }
