@@ -31,11 +31,11 @@ public class Grapple : MonoBehaviour
 	bool grappling;
 	float grappleLength;
 
-	Menu menu;
+	GameMenu menu;
 	
     void Start()
     {
-        menu = GameObject.FindObjectOfType<Menu>();
+        menu = GameObject.FindObjectOfType<GameMenu>();
     }
 
     void FixedUpdate()

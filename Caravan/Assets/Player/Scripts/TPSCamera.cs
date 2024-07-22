@@ -51,7 +51,7 @@ public class TPSCamera : MonoBehaviour
     float zoomVelocity;
     float aimStep;
     bool localplayer;
-    Menu menu;
+    GameMenu menu;
 
     void Start()
     {
@@ -59,7 +59,7 @@ public class TPSCamera : MonoBehaviour
         move = GetComponent<AltPlayerMovement>();
         SetNewUp(up);
         Cursor.lockState = CursorLockMode.Locked;
-        menu = GameObject.FindObjectOfType<Menu>();
+        menu = GameObject.FindObjectOfType<GameMenu>();
     }
 
     private void Update()

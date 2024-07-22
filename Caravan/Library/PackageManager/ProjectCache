@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638542047270000000
-    m_Hash: 1474745289
+      ticks: 638572410080662823
+    m_Hash: 63556836
   m_LockFileStatus:
     m_FilePath: C:/Users/markx/Documents/GitHub Repos/Caravan-Game/Caravan/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638542047270000000
-    m_Hash: 4202181732
+      ticks: 638572410080765438
+    m_Hash: 4054324865
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -22,12 +22,12 @@ m_LocalPackages:
 m_ProjectPath: C:/Users/markx/Documents/GitHub Repos/Caravan-Game/Caravan/Packages
 m_EditorVersion: 2021.1.19f1 (5f5eb8bbdc25)
 m_ResolvedPackages:
-- packageId: com.unity.ide.visualstudio@2.0.11
+- packageId: com.unity.ide.visualstudio@2.0.22
   testable: 0
   isDirectDependency: 1
-  version: 2.0.11
+  version: 2.0.22
   source: 1
-  resolvedPath: C:\Users\markx\Documents\GitHub Repos\Caravan-Game\Caravan\Library\PackageCache\com.unity.ide.visualstudio@2.0.11
+  resolvedPath: C:\Users\markx\Documents\GitHub Repos\Caravan-Game\Caravan\Library\PackageCache\com.unity.ide.visualstudio@2.0.22
   assetPath: Packages/com.unity.ide.visualstudio
   name: com.unity.ide.visualstudio
   displayName: Visual Studio Editor
@@ -36,7 +36,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 
-  type: asset
+  type: assets
   description: Code editor integration for supporting Visual Studio as code editor
     for unity. Adds support for generating csproj files for intellisense purposes,
     auto discovery of installations, etc.
@@ -66,6 +66,8 @@ m_ResolvedPackages:
     - 2.0.17
     - 2.0.18
     - 2.0.20
+    - 2.0.21
+    - 2.0.22
     compatible:
     - 2.0.11
     - 2.0.12
@@ -75,7 +77,9 @@ m_ResolvedPackages:
     - 2.0.17
     - 2.0.18
     - 2.0.20
-    verified: 2.0.20
+    - 2.0.21
+    - 2.0.22
+    verified: 2.0.22
   dependencies:
   - name: com.unity.test-framework
     version: 1.1.9
@@ -101,82 +105,16 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637613656180000000
-  documentationUrl: 
+  datePublishedTicks: 638326061910000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.ide.visualstudio@2.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.visualstudio.git
-    revision: 680e06d94ffca728223ae2cb14bb919cd354e2c1
+    revision: 700b44077345e97d37d464ff25507638983aed64
     path: 
   unityLifecycle:
     version: 2.0.11
-    nextVersion: 
-- packageId: com.unity.ide.vscode@1.2.3
-  testable: 0
-  isDirectDependency: 1
-  version: 1.2.3
-  source: 1
-  resolvedPath: C:\Users\markx\Documents\GitHub Repos\Caravan-Game\Caravan\Library\PackageCache\com.unity.ide.vscode@1.2.3
-  assetPath: Packages/com.unity.ide.vscode
-  name: com.unity.ide.vscode
-  displayName: Visual Studio Code Editor
-  author:
-    name: 
-    email: 
-    url: 
-  category: 
-  type: asset
-  description: Code editor integration for supporting Visual Studio Code as code
-    editor for unity. Adds support for generating csproj files for intellisense purposes,
-    auto discovery of installations, etc.
-  status: 4
-  errors: []
-  versions:
-    all:
-    - 1.0.2
-    - 1.0.3
-    - 1.0.7
-    - 1.1.0
-    - 1.1.2
-    - 1.1.3
-    - 1.1.4
-    - 1.2.0
-    - 1.2.1
-    - 1.2.2
-    - 1.2.3
-    - 1.2.4
-    - 1.2.5
-    compatible:
-    - 1.2.3
-    - 1.2.4
-    - 1.2.5
-    verified: 1.2.5
-  dependencies: []
-  resolvedDependencies: []
-  keywords: []
-  registry:
-    id: main
-    name: 
-    url: https://packages.unity.com
-    scopes: []
-    isDefault: 1
-    capabilities: 7
-  hasRegistry: 1
-  hideInEditor: 0
-  entitlements:
-    isAllowed: 1
-  isAssetStorePackage: 0
-  datePublishedTicks: 637394922300000000
-  documentationUrl: 
-  hasRepository: 1
-  repository:
-    type: git
-    url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
-    revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
-    path: 
-  unityLifecycle:
-    version: 1.2.3
     nextVersion: 
 - packageId: com.unity.test-framework@1.1.29
   testable: 0
@@ -241,6 +179,11 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -259,6 +202,11 @@ m_ResolvedPackages:
     - 1.3.7
     - 1.3.8
     - 1.3.9
+    - 1.4.0
+    - 1.4.1
+    - 1.4.2
+    - 1.4.3
+    - 1.4.4
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -304,12 +252,12 @@ m_ResolvedPackages:
   unityLifecycle:
     version: 1.1.29
     nextVersion: 
-- packageId: com.unity.textmeshpro@3.0.6
+- packageId: com.unity.textmeshpro@3.0.9
   testable: 0
   isDirectDependency: 1
-  version: 3.0.6
+  version: 3.0.9
   source: 1
-  resolvedPath: C:\Users\markx\Documents\GitHub Repos\Caravan-Game\Caravan\Library\PackageCache\com.unity.textmeshpro@3.0.6
+  resolvedPath: C:\Users\markx\Documents\GitHub Repos\Caravan-Game\Caravan\Library\PackageCache\com.unity.textmeshpro@3.0.9
   assetPath: Packages/com.unity.textmeshpro
   name: com.unity.textmeshpro
   displayName: TextMeshPro
@@ -318,7 +266,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: Text Rendering
-  type: asset
+  type: assets
   description: 'TextMeshPro is the ultimate text solution for Unity. It''s the perfect
     replacement for Unity''s UI Text and the legacy Text Mesh.
 
@@ -423,21 +371,37 @@ m_ResolvedPackages:
     - 3.0.4
     - 3.0.5
     - 3.0.6
+    - 3.0.7
+    - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
     - 3.2.0-pre.4
     - 3.2.0-pre.5
+    - 3.2.0-pre.6
+    - 3.2.0-pre.7
+    - 3.2.0-pre.8
+    - 3.2.0-pre.9
+    - 3.2.0-pre.10
     - 4.0.0-pre.1
     - 4.0.0-pre.2
     compatible:
     - 3.0.6
+    - 3.0.7
+    - 3.0.8
+    - 3.0.9
     - 3.2.0-pre.1
     - 3.2.0-pre.2
     - 3.2.0-pre.3
     - 3.2.0-pre.4
     - 3.2.0-pre.5
-    verified: 3.0.6
+    - 3.2.0-pre.6
+    - 3.2.0-pre.7
+    - 3.2.0-pre.8
+    - 3.2.0-pre.9
+    - 3.2.0-pre.10
+    verified: 3.0.9
   dependencies:
   - name: com.unity.ugui
     version: 1.0.0
@@ -466,13 +430,13 @@ m_ResolvedPackages:
   entitlements:
     isAllowed: 1
   isAssetStorePackage: 0
-  datePublishedTicks: 637547111200000000
-  documentationUrl: 
+  datePublishedTicks: 638515173480000000
+  documentationUrl: https://docs.unity3d.com/Packages/com.unity.textmeshpro@3.0/manual/index.html
   hasRepository: 1
   repository:
     type: git
     url: https://github.cds.internal.unity3d.com/unity/com.unity.textmeshpro.git
-    revision: 01e57e3b7de18af9dfe9baaa0a0ff5cc4765c899
+    revision: 0af193626b4f76795f7cb6c9b0f55389d0e4b1d6
     path: 
   unityLifecycle:
     version: 3.0.6
@@ -503,6 +467,7 @@ m_ResolvedPackages:
     - 1.0.0
     - 3.0.0-exp.1
     - 3.0.0-exp.3
+    - 3.0.0-exp.4
     compatible:
     - 1.0.0
     verified: 1.0.0
