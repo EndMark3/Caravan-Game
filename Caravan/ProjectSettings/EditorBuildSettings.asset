@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 0
+    path: Assets/Samples/Relay/1.1.1/Simple Relay Sample/SimpleRelay.unity
+    guid: 207fcaccdfb642c49ba9e63f57b94b2e
+  - enabled: 0
+    path: Assets/Prototypes/Netcode/NetcodeTestScene.unity
+    guid: 916cca2ae1f805a4e9d090fd59f63f65
+  - enabled: 0
+    path: Assets/Samples/Relay/1.1.1/Simple Relay Sample (using UTP)/SimpleRelayUtp.unity
+    guid: 3573da1ccba6a412e965f523d689fbd6
+  - enabled: 1
+    path: Assets/Prototypes/Netcode/NetcodeSampleScene.unity
+    guid: d1245b32b186c114c93119b962b90a7c
   m_configObjects: {}
