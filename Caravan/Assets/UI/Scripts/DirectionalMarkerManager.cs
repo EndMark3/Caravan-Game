@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Sprites;
+//using UnityEditor.Sprites;
 using UnityEngine;
 
 public class DirectionalMarkerManager : MonoBehaviour
